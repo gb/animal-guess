@@ -21,16 +21,11 @@ class MockAdapter extends UIAdapter {
 	}
 	
 	private def displayCurrentAskAndAnswer(question: Object) {
-	  	println("Question: " + question);
-	    println("Answer: " + answers.first);
 	    log += question
 	    log += answers.first
 	}
 
-	def displayMessage(message: String) {
-	  	 println("Message: " + message);
-	  	 log += message;
-	}
+	def displayMessage(message: String) = log += message;
 	
 	def recordAnswer(answer: Any) = answers += answer;
 	

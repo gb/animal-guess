@@ -20,7 +20,7 @@ class MockAdapterTest extends AssertionsForJUnit {
 	
 	@Test
 	def displayMessageTest() {
-		var message = "Hell World, Scala rocks!"
+		var message = "Hello World, Scala rocks!"
 		
 		adapter.displayMessage(message);
 		assertEquals(1, adapter.log.length)
