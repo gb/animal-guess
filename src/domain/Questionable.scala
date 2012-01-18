@@ -4,16 +4,12 @@ import adapter.UIAdapter
 
 abstract class Questionable(val label: String) {
   
-	protected var answer : Boolean = false
-  
 	def question() : String
 	def yes(adapter: UIAdapter) : Questionable
 	def no(adapter: UIAdapter) : Questionable
 	
-	def makeQuestion(adapter: UIAdapter) = {
-		answer = adapter.makeQuestion(this)
-		if (answer) yes(adapter) else no(adapter)
-	}
+	def makeQuestion(adapter: UIAdapter) = 
+		if (adapter.makeQuestion(this)) yes(adapter) else no(adapter)
 	
 	override def toString() = getClass().getSimpleName() + " : " + label
 	
