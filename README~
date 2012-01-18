@@ -1,0 +1,5 @@
+*** ANIMAL GUESS
+A very simple machine learning over a guessing game.
+
+The program implements a binary tree playing an interactive guessing game, 
+and the game gets smarter each time it is played.
