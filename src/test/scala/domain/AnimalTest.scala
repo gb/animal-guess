@@ -12,7 +12,7 @@ class AnimalTest extends AssertionsForJUnit {
 
     @Test
 	def animalQuestionTest() {
-		assertEquals("My guess is: Dog! Am I right?", dog.question())		  
+		assertEquals("My guess is: Dog! Am I right?", dog question)		  
 	}
     
     @Test

@@ -24,7 +24,7 @@ class MockAdapterTest extends AssertionsForJUnit {
 		
 		adapter.displayMessage(message);
 		assertEquals(1, adapter.log.length)
-		assertEquals(message, adapter.log.dequeue())
+		assertEquals(message, adapter dequeue)
 	}
 	
 	@Test
@@ -48,6 +48,5 @@ class MockAdapterTest extends AssertionsForJUnit {
 		adapter.resetLog()
 		assertEquals(0, adapter.log.length)
 	}
-	
 
 }

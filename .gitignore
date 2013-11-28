@@ -1,5 +1,31 @@
-bin
-.settings
+# SBT
+boot/
+lib_managed/
+target/
+.history
+*.xml
+
+# Eclipse
+.class
+.tmp
+.lauch
 .cache
 .classpath
 .project
+.scala_dependencies
+.settings
+.target/
+bin
+
+# IntelliJ
+.idea/
+*.iml
+*.ipr
+*.iws
+out/
+
+# TextMate
+*.tmproj
+
+# Mac
+.DS_Store

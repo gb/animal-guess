@@ -4,15 +4,16 @@ import scala.collection.mutable.Queue
 import java.util.LinkedList
 import scala.collection.mutable.ArrayStack
 import domain.Questionable
+import scala.reflect.ClassTag
 
 class MockAdapter extends UIAdapter {
   
-	val answers : Queue[_ >: Any] = new Queue();
-	val log : Queue[_ >: Any] = new Queue();
+	val answers : Queue[Any] = new Queue();
+	val log : Queue[Any] = new Queue();
 
   	def makeQuestion(questionable: Questionable) : Boolean = {
   		displayCurrentAskAndAnswer(questionable)
-  		return answers.dequeue().asInstanceOf[Boolean]
+  		answers.dequeue().asInstanceOf[Boolean]
   	}
 
 	def makeTextQuestion(question: String) : String = {
@@ -20,15 +21,17 @@ class MockAdapter extends UIAdapter {
   		answers.dequeue().asInstanceOf[String];
 	}
 	
-	private def displayCurrentAskAndAnswer(question: Object) {
-	    log += question
-	    log += answers.first
+	private def displayCurrentAskAndAnswer(question: Any) {
+  		log.enqueue(question)
+  		log.enqueue(answers front)
 	}
 
-	def displayMessage(message: String) = log += message;
+	def displayMessage(message: String) = log.enqueue(message)
 	
-	def recordAnswer(answer: Any) = answers += answer;
+	def recordAnswer(answer: Any) = answers.enqueue(answer);
 	
-	def resetLog() = log.clear()
+	def dequeue = log dequeue;
+	
+	def resetLog() = log clear;
   
 }

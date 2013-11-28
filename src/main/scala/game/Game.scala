@@ -30,7 +30,7 @@ object Game extends SimpleSwingApplication {
 
 		listenTo(button)
 		reactions += {
-			case ButtonClicked(b) => game.start();
+			case ButtonClicked(b) => game start
 		}
 
 		this.peer.setLocationRelativeTo(null)
