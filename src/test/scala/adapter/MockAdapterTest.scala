@@ -7,7 +7,7 @@ import domain.Animal
 
 class MockAdapterTest extends AssertionsForJUnit {
   
-	private val adapter = new MockAdapter()
+	private val adapter = new MockAdapter
 
     @Test
 	def recordAnswersTest() {
@@ -45,7 +45,7 @@ class MockAdapterTest extends AssertionsForJUnit {
 		adapter.displayMessage("log again")
 		assertEquals(2, adapter.log.length)
 		
-		adapter.resetLog()
+		adapter.resetLog
 		assertEquals(0, adapter.log.length)
 	}
 

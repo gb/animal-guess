@@ -8,8 +8,7 @@ import scala.reflect.ClassTag
 
 class MockAdapter extends UIAdapter {
   
-	val answers : Queue[Any] = new Queue();
-	val log : Queue[Any] = new Queue();
+	val answers, log : Queue[Any] = new Queue
 
   	def makeQuestion(questionable: Questionable) : Boolean = {
   		displayCurrentAskAndAnswer(questionable)
@@ -18,7 +17,7 @@ class MockAdapter extends UIAdapter {
 
 	def makeTextQuestion(question: String) : String = {
   		displayCurrentAskAndAnswer(question)
-  		answers.dequeue().asInstanceOf[String];
+  		answers.dequeue().asInstanceOf[String]
 	}
 	
 	private def displayCurrentAskAndAnswer(question: Any) {
@@ -28,10 +27,10 @@ class MockAdapter extends UIAdapter {
 
 	def displayMessage(message: String) = log.enqueue(message)
 	
-	def recordAnswer(answer: Any) = answers.enqueue(answer);
+	def recordAnswer(answer: Any) = answers.enqueue(answer)
 	
-	def dequeue = log dequeue;
+	def dequeue = log dequeue
 	
-	def resetLog() = log clear;
+	def resetLog = log clear
   
 }

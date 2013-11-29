@@ -5,7 +5,7 @@ import adapter.UIAdapter
 
 class Animal(override val label : String) extends Questionable(label) {
   
-  	override def question() = "My guess is: " + label + "! Am I right?"
+  	override def question = "My guess is: " + label + "! Am I right?"
 
 	def yes(adapter: UIAdapter) = {	
 		adapter.displayMessage("I knew it all along! :-)")

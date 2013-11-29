@@ -11,7 +11,7 @@ class CharacteristicTest extends AssertionsForJUnit {
 
     @Test
 	def characteristicQuestionTest() {
-		assertEquals("The animal thought: is Mammal ?", mammal.question())		  
+		assertEquals("The animal thought: is Mammal ?", mammal.question)		  
 	}
 
 }

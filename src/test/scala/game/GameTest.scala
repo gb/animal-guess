@@ -105,7 +105,7 @@ class GameTest extends AssertionsForJUnit {
   	private val YES = true
   	private val NO = false
   	
-  	private val adapter = new MockAdapter()
+  	private val adapter = new MockAdapter
   	private val game = new AnimalGuess(adapter)
 
 }

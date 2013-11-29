@@ -8,7 +8,7 @@ import adapter.MockAdapter
 class AnimalTest extends AssertionsForJUnit {
   
 	private val dog = new Animal("Dog")
-	private val adapter = new MockAdapter()
+	private val adapter = new MockAdapter
 
     @Test
 	def animalQuestionTest() {

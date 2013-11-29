@@ -4,7 +4,7 @@ import adapter.UIAdapter
 
 abstract class Questionable(val label: String) {
 
-  def question(): String
+  def question: String
   def yes(adapter: UIAdapter): Questionable
   def no(adapter: UIAdapter): Questionable
 
@@ -14,6 +14,6 @@ abstract class Questionable(val label: String) {
   override def toString() = getClass().getSimpleName() + " : " + label
 
   override def equals(obj: scala.Any): Boolean =
-    obj.getClass == getClass() && obj.asInstanceOf[Questionable].label == label
+    obj.getClass == getClass && obj.asInstanceOf[Questionable].label == label
 
 }

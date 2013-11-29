@@ -15,7 +15,8 @@ target/
 .scala_dependencies
 .settings
 .target/
-bin
+bin/
+java/
 
 # IntelliJ
 .idea/
