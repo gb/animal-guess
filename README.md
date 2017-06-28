@@ -1,4 +1,4 @@
-ANIMAL GUESS [![Build Status](https://travis-ci.org/gabrielsuch/animal-guess.png)](https://travis-ci.org/gabrielsuch/animal-guess)
+ANIMAL GUESS [![Build Status](https://travis-ci.org/gb/animal-guess.png)](https://travis-ci.org/gabrielsuch/animal-guess)
 =========
 A very simple machine learning over a guessing game.
 
